@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6462057430984625574
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6593311408238813268}
+  m_Layer: 0
+  m_Name: Firepoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6593311408238813268
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6462057430984625574}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.24, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1064232026704470447}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &670561487406564932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63,9 +94,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: NetworkCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 8aa1ebf8489e4b24f94e0c6132fbcaa9,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5a648e42d94581c47944c6264379f6c5, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 8aa1ebf8489e4b24f94e0c6132fbcaa9,
+        type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
+        'mixamorig:LeftHandThumb2'\n\tTransform 'mixamorig:LeftHandIndex1'\n\tTransform
+        'mixamorig:LeftHandPinky2'\n\tTransform 'mixamorig:RightHandRing2'\n\tTransform
+        'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:LeftHandThumb3'\n\tTransform
+        'mixamorig:RightArm'\n\tand more ...\n\tFrom animation clip 'Dying Backwards'\n\tFrom
+        animation clip 'Idle'\n\tFrom animation clip 'Walking'"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8aa1ebf8489e4b24f94e0c6132fbcaa9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6593311408238813268}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8aa1ebf8489e4b24f94e0c6132fbcaa9,
         type: 3}
@@ -79,6 +131,22 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2259173838229731298}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8aa1ebf8489e4b24f94e0c6132fbcaa9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1078573036557669095}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8aa1ebf8489e4b24f94e0c6132fbcaa9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -7949694024082363080}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8aa1ebf8489e4b24f94e0c6132fbcaa9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -2340919832112662952}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8aa1ebf8489e4b24f94e0c6132fbcaa9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4509248903937524800}
   m_SourcePrefab: {fileID: 100100000, guid: 8aa1ebf8489e4b24f94e0c6132fbcaa9, type: 3}
 --- !u!1 &400602454638476053 stripped
 GameObject:
@@ -98,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 1866637493
+  GlobalObjectIdHash: 1213756935
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -132,3 +200,92 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c61a626f01c08fd498991dbcae6bdf93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UseUnreliableDeltas: 0
+  SyncPositionX: 1
+  SyncPositionY: 1
+  SyncPositionZ: 1
+  SyncRotAngleX: 1
+  SyncRotAngleY: 1
+  SyncRotAngleZ: 1
+  SyncScaleX: 1
+  SyncScaleY: 1
+  SyncScaleZ: 1
+  PositionThreshold: 0.001
+  RotAngleThreshold: 0.01
+  ScaleThreshold: 0.01
+  UseQuaternionSynchronization: 0
+  UseQuaternionCompression: 0
+  UseHalfFloatPrecision: 0
+  InLocalSpace: 0
+  Interpolate: 1
+  SlerpPosition: 0
+--- !u!114 &-1078573036557669095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400602454638476053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d0727d5ae3244e3b569694d3912374, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TransitionStateInfoList: []
+  m_Animator: {fileID: 6351418765395999701}
+--- !u!114 &-7949694024082363080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400602454638476053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9581e34ff4e6bcd499f9651e054e7d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 6369609926593643541, guid: 132402aeb4e531b48abff1f8633a8093,
+    type: 3}
+  firePoint: {fileID: 6593311408238813268}
+--- !u!114 &-2340919832112662952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400602454638476053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be731b478118ba443a16924365f1e888, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health:
+    m_InternalValue: 100
+  healthBar: {fileID: 0}
+--- !u!114 &-4509248903937524800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400602454638476053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73a5ecdb55bf16e438f287db874cdce4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score:
+    m_InternalValue: 0
+--- !u!4 &1064232026704470447 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8aa1ebf8489e4b24f94e0c6132fbcaa9,
+    type: 3}
+  m_PrefabInstance: {fileID: 670561487406564932}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &6351418765395999701 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 8aa1ebf8489e4b24f94e0c6132fbcaa9,
+    type: 3}
+  m_PrefabInstance: {fileID: 670561487406564932}
+  m_PrefabAsset: {fileID: 0}
