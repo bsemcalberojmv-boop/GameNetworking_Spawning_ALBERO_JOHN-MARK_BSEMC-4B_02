@@ -23,8 +23,10 @@ public class PlayerSpawner : MonoBehaviour
     {
         if (!NetworkManager.Singleton.IsServer) return;
 
-        GameObject playerInstance = Instantiate(Playerprefab, new Vector3(0, 0, 0), quaternion.identity);
-
+        Vector3 spawnPosition = new Vector3(clientId * 2f, 0, 0);
+        
+        GameObject playerInstance = Instantiate(Playerprefab, spawnPosition, quaternion.identity);
+       
         playerInstance.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId);
     }
 }
