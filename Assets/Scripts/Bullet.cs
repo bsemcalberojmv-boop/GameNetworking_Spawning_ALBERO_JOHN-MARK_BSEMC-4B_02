@@ -12,7 +12,6 @@ public class Bullet : NetworkBehaviour
     void Update()
     {
         if (!IsServer) return; 
-
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
         timer += Time.deltaTime;
@@ -26,8 +25,11 @@ public class Bullet : NetworkBehaviour
     {
         if (!IsServer) return;
 
-        PlayerHealth targetHealth = other.GetComponent<PlayerHealth>();
-        if (targetHealth != null && other.GetComponent<NetworkObject>().OwnerClientId != OwnerClientId)
+        
+        PlayerHealth targetHealth = other.GetComponentInParent<PlayerHealth>();
+        NetworkObject targetNetworkObject = other.GetComponentInParent<NetworkObject>();
+
+        if (targetHealth != null && targetNetworkObject != null && targetNetworkObject.OwnerClientId != OwnerClientId)
         {
             targetHealth.TakeDamage(damage, OwnerClientId);
             GetComponent<NetworkObject>().Despawn();
