@@ -52,7 +52,7 @@ public class Collectibleobject : NetworkBehaviour
         Debug.Log(message);
 
         // Route this to your UI announcer if you have one:
-        //if (AnnouncementUI.Instance != null)
-           // AnnouncementUI.Instance.ShowAnnouncement(message);
+        if (AnnouncementUI.Instance != null)
+            AnnouncementUI.Instance.ShowAnnouncement(message);
     }
 }
